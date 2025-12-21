@@ -1,0 +1,65 @@
+{
+  "demo-user": {
+    "_meta": {
+      "asked_paths": []
+    },
+    "act": {
+      "best_composite": null,
+      "status": "Planning to take"
+    },
+    "applicant_type": "First-year",
+    "budget_range_all_in": "$50–70k/yr",
+    "campus_size_pref": "No preference",
+    "career_goal": "Not sure",
+    "class_rank": "2",
+    "college_gpa": null,
+    "css_profile_willing": "Yes",
+    "distance_preference": "Anywhere is fine",
+    "entry_term": "Spring 2027",
+    "fafsa_intent": "Yes",
+    "gpa_unweighted": 4.0,
+    "gpa_weighted": 4.35,
+    "grad_school_plan": "No",
+    "hard_dealbreakers": [
+      "No hard dealbreakers"
+    ],
+    "highest_math": "AP Calculus",
+    "highest_science": "AP Physics",
+    "hs_grad_year": 2026,
+    "in_state_importance": "Not important",
+    "intended_major_alternates": [
+      "Business",
+      "Economics"
+    ],
+    "intended_major_primary": "Engineering",
+    "list_size_target": 10,
+    "loan_tolerance": "Skip",
+    "major_certainty": "Somewhat; open to other majors as well",
+    "regions_open_to": [
+      "Any U.S. region"
+    ],
+    "residency_status": "U.S. citizen",
+    "rigor_tags": [
+      "Advanced STEM track"
+    ],
+    "sat": {
+      "best_total": 1570,
+      "ebrw": 760,
+      "math": 800,
+      "status": "Planning to take"
+    },
+    "setting_preference": "Urban",
+    "soft_preferences": [
+      "No soft preferences"
+    ],
+    "state_of_residence": "CA",
+    "test_strategy": "Take both SAT and ACT",
+    "top_activities": [
+      "Varsity volleyball (2 years, ~12 hrs/week)",
+      "Programming club (General Secretary, ~6 hrs/week)"
+    ],
+    "us_only": true,
+    "vibe_pref": "Open to any vibe",
+    "want_reach_match_safety": "Yes—include a mix of reach, match, and safety"
+  }
+}

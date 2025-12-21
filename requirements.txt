@@ -1,19 +1,28 @@
+# Core API & Server
 fastapi==0.115.12
 uvicorn[standard]==0.34.2
+pydantic==2.11.4
+httpx==0.28.1
+
+# Database
 pymongo==4.12.1
+
+# AI & LLM
 openai==1.77.0
 langchain==0.3.25
 langchain-community==0.3.23
+langchain-core==0.3.58
 langchain-openai==0.3.16
+langchain-experimental==0.3.4
+langgraph==0.4.2
+
+# Data & Scraping
 numpy==2.2.5
-python-dotenv==1.1.0
-httpx==0.28.1
-supervisor
+beautifulsoup4==4.13.4
 selenium==4.32.0
 webdriver-manager==4.0.1
+
+# Utilities
+python-dotenv==1.1.0
 schedule==1.2.2
-pydantic==2.11.4
-langchain-experimental==0.3.4
-langchain-core==0.3.58
-beautifulsoup4==4.13.4
-langgraph==0.4.2
+supervisor

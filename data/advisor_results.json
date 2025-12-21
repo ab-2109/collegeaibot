@@ -1,0 +1,127 @@
+{
+  "demo-user": {
+    "summary": "You\u2019re a very strong applicant academically (4.0 UW/4.35 W, class rank #2, SAT 1570 with 800 Math, rigorous AP STEM). For Engineering, the most selective programs are still reaches for everyone, so I\u2019m balancing top-tier \u201cExtreme Reaches\u201d with realistic \u201cTarget Match\u201d options and a couple of high-likelihood \u201cSafety\u201d schools that still have solid engineering outcomes. Note: many universities do not offer Spring entry for first-year applicants in Engineering, so you should verify Spring 2027 availability for each school (or plan for Fall 2027 if needed).",
+    "recommendations": [
+      {
+        "college_name": "Massachusetts Institute of Technology (MIT)",
+        "location": "Cambridge, MA",
+        "category": "Extreme Reach",
+        "match_score": 88,
+        "reasoning": "World-leading engineering and CS; your SAT (1570/800M) and academic rigor are in range, but admission is extraordinarily competitive and heavily EC/impact-driven. Great fit if you can present distinctive technical depth/leadership beyond classes.",
+        "tuition_estimate": "~$62k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Early Action usually early Nov; Regular Action usually early Jan (confirm for your cycle)",
+        "admission_website": "https://mitadmissions.org/apply/firstyear/",
+        "scholarship_info": "Need-based aid only (MIT meets full demonstrated need).",
+        "scholarship_website": "https://sfs.mit.edu/undergraduate-students/financial-aid/"
+      },
+      {
+        "college_name": "Stanford University",
+        "location": "Stanford, CA",
+        "category": "Extreme Reach",
+        "match_score": 86,
+        "reasoning": "Elite engineering + entrepreneurship ecosystem in an urban-adjacent setting; your academics are strong, but Stanford is an extreme reach for all. Strong programming/leadership can help if you show tangible impact/projects.",
+        "tuition_estimate": "~$65k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Restrictive Early Action usually early Nov; Regular Decision usually early Jan (confirm for your cycle)",
+        "admission_website": "https://admission.stanford.edu/apply/",
+        "scholarship_info": "Need-based aid (no merit scholarships).",
+        "scholarship_website": "https://financialaid.stanford.edu/"
+      },
+      {
+        "college_name": "University of California, Berkeley",
+        "location": "Berkeley, CA",
+        "category": "Extreme Reach",
+        "match_score": 84,
+        "reasoning": "Top engineering reputation and recruiting; extremely competitive, especially for College of Engineering. As a CA resident with top stats and strong rigor, you\u2019re a plausible contender but still a reach.",
+        "tuition_estimate": "CA resident: ~ $15k tuition/fees (total cost higher with housing); Nonresident higher",
+        "application_deadline": "UC application filing period typically Oct 1\u2013Nov 30 (confirm for your cycle)",
+        "admission_website": "https://admissions.berkeley.edu/",
+        "scholarship_info": "Berkeley financial aid and scholarships (many are need-based; some campus scholarships available).",
+        "scholarship_website": "https://financialaid.berkeley.edu/"
+      },
+      {
+        "college_name": "Carnegie Mellon University",
+        "location": "Pittsburgh, PA",
+        "category": "Extreme Reach",
+        "match_score": 83,
+        "reasoning": "Exceptional engineering/CS culture; your math/SAT profile fits well, but CMU (especially CS) is highly selective. Great if you want a tech-forward, project-heavy environment.",
+        "tuition_estimate": "~$64k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Early Decision I usually early Nov; Regular Decision usually early Jan (confirm for your cycle)",
+        "admission_website": "https://www.cmu.edu/admission/admission/",
+        "scholarship_info": "Need-based aid; limited merit scholarships.",
+        "scholarship_website": "https://www.cmu.edu/sfs/financial-aid/"
+      },
+      {
+        "college_name": "University of Michigan\u2014Ann Arbor",
+        "location": "Ann Arbor, MI",
+        "category": "Target Match",
+        "match_score": 82,
+        "reasoning": "Highly ranked engineering with broad majors and strong career outcomes; your stats are very competitive. Michigan can still be selective for out-of-state students, but this is a realistic \u201cmatch/reach-leaning target.\u201d",
+        "tuition_estimate": "Nonresident: ~ $60k+/yr total cost (tuition + housing/fees); check current COA",
+        "application_deadline": "EA usually early Nov; RD usually early Feb (confirm for your cycle)",
+        "admission_website": "https://admissions.umich.edu/apply/first-year-applicants",
+        "scholarship_info": "Need-based aid; limited merit for nonresidents (separate scholarship consideration varies by college).",
+        "scholarship_website": "https://finaid.umich.edu/"
+      },
+      {
+        "college_name": "Georgia Institute of Technology",
+        "location": "Atlanta, GA",
+        "category": "Target Match",
+        "match_score": 81,
+        "reasoning": "Top public engineering with strong internships/co-ops; urban setting. Competitive for out-of-state, but your academics put you in a strong position. Good option if you want a tech campus with big recruiting pipelines.",
+        "tuition_estimate": "Out-of-state: ~ $32k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Early Action/Regular deadlines vary by residency; confirm for your cycle",
+        "admission_website": "https://admission.gatech.edu/apply",
+        "scholarship_info": "A few merit scholarships; many students use need-based aid + external scholarships.",
+        "scholarship_website": "https://finaid.gatech.edu/"
+      },
+      {
+        "college_name": "University of Illinois Urbana-Champaign (UIUC)",
+        "location": "Urbana-Champaign, IL",
+        "category": "Target Match",
+        "match_score": 80,
+        "reasoning": "Excellent engineering and CS-adjacent options with strong recruiting; your SAT math and rigor align well. Engineering admissions are competitive, but your profile is within a strong match range.",
+        "tuition_estimate": "Nonresident: ~ $40k+ tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Priority deadline typically early Nov (varies by major/college); confirm for your cycle",
+        "admission_website": "https://www.admissions.illinois.edu/apply/freshman",
+        "scholarship_info": "Limited merit for nonresidents; check campus + college of engineering scholarship opportunities.",
+        "scholarship_website": "https://osfa.illinois.edu/"
+      },
+      {
+        "college_name": "Purdue University",
+        "location": "West Lafayette, IN",
+        "category": "Target Match",
+        "match_score": 79,
+        "reasoning": "Strong engineering brand and outcomes at a comparatively better value; your stats are well above typical admits. Good \u201chigh-probability target,\u201d especially if budget sensitivity increases.",
+        "tuition_estimate": "Nonresident: ~ $28k\u2013$33k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Early Action usually Nov 1 (recommended for engineering); confirm for your cycle",
+        "admission_website": "https://www.admissions.purdue.edu/apply/index.php",
+        "scholarship_info": "Merit scholarships available; priority consideration often tied to Early Action.",
+        "scholarship_website": "https://www.purdue.edu/dfa/"
+      },
+      {
+        "college_name": "University of Wisconsin\u2013Madison",
+        "location": "Madison, WI",
+        "category": "Safety",
+        "match_score": 76,
+        "reasoning": "Well-regarded College of Engineering with strong research and recruiting; for your stats, admission is likely (though specific engineering majors can be capacity constrained). Solid choice if you want a high-likelihood option with reputable outcomes.",
+        "tuition_estimate": "Nonresident: ~ $40k+ tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Typically Nov 1 (EA) / mid-Jan (RD); confirm for your cycle",
+        "admission_website": "https://admissions.wisc.edu/",
+        "scholarship_info": "Merit/need-based scholarship options for nonresidents; check scholarship hub and FAFSA-based aid.",
+        "scholarship_website": "https://financialaid.wisc.edu/"
+      },
+      {
+        "college_name": "Iowa State University",
+        "location": "Ames, IA",
+        "category": "Safety",
+        "match_score": 74,
+        "reasoning": "Large, well-established engineering programs with strong hands-on learning; admissions are very likely with your stats. Good safety that can also offer merit to high-achieving students, helping you stay within your $50\u201370k/yr budget target.",
+        "tuition_estimate": "Nonresident: ~ $26k\u2013$30k tuition/yr (total cost higher with housing/fees)",
+        "application_deadline": "Rolling admissions (apply earlier for scholarships/housing)",
+        "admission_website": "https://www.admissions.iastate.edu/",
+        "scholarship_info": "Automatic/competitive merit scholarships for first-year students; priority dates apply.",
+        "scholarship_website": "https://www.financialaid.iastate.edu/scholarships"
+      }
+    ]
+  }
+}

@@ -13,11 +13,12 @@ from .storage import JsonFileScholarshipStore
 def run_cli(client_id: Optional[str] = None) -> None:
     client_id = client_id or os.getenv("CLIENT_ID", "demo-user")
 
+    current_dir = Path(__file__).resolve().parent
+    project_root = current_dir.parent.parent
+
     # Optional advisor output (college list) to tailor institutional scholarship leads.
     advisor_data = None
     try:
-        current_dir = Path(__file__).resolve().parent
-        project_root = current_dir.parent.parent
         advisor_path = project_root / "data" / "advisor_results.json"
         if advisor_path.exists():
             with advisor_path.open("r", encoding="utf-8") as f:
@@ -93,6 +94,28 @@ def run_cli(client_id: Optional[str] = None) -> None:
                 steps = r.get("how_to_apply") or []
                 if steps:
                     print("   Apply: " + "; ".join(steps[:4]))
+
+            # Save recommendations for the prep agent
+            try:
+                output_path = project_root / "data" / "scholarship_recommendations.json"
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+
+                existing = {}
+                if output_path.exists():
+                    with output_path.open("r", encoding="utf-8") as f:
+                        existing = json.load(f)
+
+                existing[client_id] = {
+                    "recommendations": recs,
+                }
+
+                with output_path.open("w", encoding="utf-8") as f:
+                    json.dump(existing, f, ensure_ascii=False, indent=2)
+
+                print(f"\n[Saved {len(recs)} recommendations to {output_path}]")
+            except Exception as e:
+                print(f"\n[Could not save recommendations: {e}]")
+
             break
 
         q = response.get("question")

@@ -35,6 +35,16 @@
     "list_size_target": 10,
     "loan_tolerance": "Skip",
     "major_certainty": "Somewhat; open to other majors as well",
+    "prep": {
+      "available_hours_weekly": "5-10 hours",
+      "competitions_awards": "Ranked first in state science exhibition\\",
+      "current_extracurriculars": "Sports : Volleyball, Swimming Clubs : Finance club, algorithms club Community service also",
+      "leadership_roles": "Yes, currently the captain of the varsity volleyball team and general secretary of the algorithms club",
+      "technical_skills": "Proficient in cpp, python, photoshopping as well",
+      "volunteer_service": "Feeding the poor",
+      "work_experience": "Researced at UCSD for 1 month, area was developing deep neural networks.",
+      "timeline": "Fall 2026"
+    },
     "regions_open_to": [
       "Any U.S. region"
     ],

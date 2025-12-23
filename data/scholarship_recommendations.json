@@ -1,0 +1,244 @@
+{
+  "demo-user": {
+    "recommendations": [
+      {
+        "name": "MIT Need-Based Financial Aid (undergraduate)",
+        "college": "Massachusetts Institute of Technology (MIT)",
+        "kind": "need_based_aid",
+        "provider": "MIT Student Financial Services",
+        "award": "Need-based; MIT meets 100% of demonstrated need with grants/work; no loans in package for many families (per MIT policy details).",
+        "deadline": "2026-01-05",
+        "link": "https://sfs.mit.edu/undergraduate-students/financial-aid/",
+        "why_suitable": "MIT does not award merit scholarships; as a high-achieving applicant with FAFSA/CSS willingness, your primary pathway is MIT’s need-based grant aid if admitted.",
+        "key_eligibility": [
+          "Admitted undergraduate student",
+          "Complete FAFSA + CSS Profile and required documents"
+        ],
+        "how_to_apply": [
+          "Submit FAFSA and CSS Profile by MIT’s listed dates for your entry term",
+          "Upload required tax/verification documents through MIT SFS portal"
+        ]
+      },
+      {
+        "name": "Stanford Undergraduate Need-Based Financial Aid",
+        "college": "Stanford University",
+        "kind": "need_based_aid",
+        "provider": "Stanford Financial Aid Office",
+        "award": "Need-based; Stanford meets demonstrated need with scholarship/grant, work, and (as applicable) student responsibility components.",
+        "deadline": "2025-12-19",
+        "link": "https://financialaid.stanford.edu/",
+        "why_suitable": "Stanford’s core aid is need-based (not merit). Your FAFSA/CSS willingness and strong academics make you a strong candidate for admission and potential institutional grant aid based on family finances.",
+        "key_eligibility": [
+          "Admitted undergraduate student",
+          "Complete FAFSA + CSS Profile and Stanford-required forms"
+        ],
+        "how_to_apply": [
+          "Follow Stanford’s FAFSA/CSS/Profile checklist and timelines for your entry term",
+          "Submit required parent/student income documents as requested"
+        ]
+      },
+      {
+        "name": "UC Berkeley Financial Aid & Scholarships (Need-based grants; scholarships via Berkeley Scholarship Connection)",
+        "college": "University of California, Berkeley",
+        "kind": "need_based_aid",
+        "provider": "UC Berkeley Financial Aid and Scholarships Office",
+        "award": "Varies (federal/state grants, UC/Cal grants, Berkeley scholarships).",
+        "deadline": "2025-04-02",
+        "link": "https://financialaid.berkeley.edu/",
+        "why_suitable": "As a CA resident planning FAFSA, you can stack CA state programs (Cal Grant/Middle Class Scholarship if eligible) with Berkeley grants/scholarships; engineering-intended students can also pursue campus scholarships.",
+        "key_eligibility": [
+          "File FAFSA/CA aid applications on time",
+          "Meet UC Berkeley scholarship/aid requirements as posted"
+        ],
+        "how_to_apply": [
+          "File FAFSA by the CA priority deadline when applying",
+          "Complete any Berkeley scholarship application steps listed on the Berkeley site/portals"
+        ]
+      },
+      {
+        "name": "Carnegie Mellon University Undergraduate Financial Aid (Need-based; limited merit)",
+        "college": "Carnegie Mellon University",
+        "kind": "need_based_aid",
+        "provider": "Carnegie Mellon University Office of Undergraduate Admission / Student Financial Services",
+        "award": "Varies (need-based grants; merit scholarships may be available for some applicants/programs).",
+        "deadline": null,
+        "link": "https://www.cmu.edu/sfs/financial-aid/",
+        "why_suitable": "CMU is typically grant-focused for demonstrated need, with some merit in certain cases; your academic profile is competitive and you’re willing to file FAFSA/CSS.",
+        "key_eligibility": [
+          "Admitted undergraduate student",
+          "FAFSA and (if required) CSS Profile/documentation"
+        ],
+        "how_to_apply": [
+          "Submit FAFSA and any CMU-required forms by their posted dates",
+          "Respond to verification/document requests promptly"
+        ]
+      },
+      {
+        "name": "Georgia Tech Stamps President’s Scholars Program",
+        "college": "Georgia Institute of Technology",
+        "kind": "institutional",
+        "provider": "Georgia Tech + Stamps Scholars",
+        "award": "Full cost of attendance (per program description; includes enrichment funding).",
+        "deadline": null,
+        "link": "https://stampsps.gatech.edu/",
+        "why_suitable": "Extremely competitive merit program aligned with top academic metrics (your SAT 1570 and rigorous STEM track). Strong leadership (club officer) and activities help.",
+        "key_eligibility": [
+          "Incoming first-year applicant to Georgia Tech",
+          "Exceptional academic achievement and leadership"
+        ],
+        "how_to_apply": [
+          "Apply for first-year admission to Georgia Tech by the required deadline",
+          "Follow Stamps PS nomination/selection steps outlined by Georgia Tech"
+        ]
+      },
+      {
+        "name": "Illinois Commitment (UIUC) – Commitment Program for In-State Students (need-based tuition support)",
+        "college": "University of Illinois Urbana-Champaign (UIUC)",
+        "kind": "need_based_aid",
+        "provider": "University of Illinois Urbana-Champaign",
+        "award": "Tuition and fees covered for qualifying in-state students (per program description).",
+        "deadline": null,
+        "link": "https://osfa.illinois.edu/types-of-aid/other-aid/illinois-commitment/",
+        "why_suitable": "If you consider establishing IL residency or are otherwise eligible in the future, this is a major institutional need-based program; otherwise, it’s still important to know UIUC’s big-ticket aid programs while comparing schools.",
+        "key_eligibility": [
+          "UIUC in-state residency requirement (program-specific)",
+          "Meet income/need criteria and complete financial aid steps"
+        ],
+        "how_to_apply": [
+          "Apply to UIUC and complete FAFSA/required forms",
+          "Follow OSFA instructions for Illinois Commitment qualification"
+        ]
+      },
+      {
+        "name": "Iowa State University: George Washington Carver Scholarship (High Ability / Merit)",
+        "college": "Iowa State University",
+        "kind": "institutional",
+        "provider": "Iowa State University Office of Student Financial Aid",
+        "award": "Varies (multi-year merit scholarship; amount depends on selection/year).",
+        "deadline": null,
+        "link": "https://www.financialaid.iastate.edu/types-of-aid/scholarships/",
+        "why_suitable": "As a high-stat applicant (4.0 UW / 1570 SAT), you’re well-positioned for large merit at a safety like Iowa State, particularly in engineering.",
+        "key_eligibility": [
+          "Incoming first-year student to Iowa State",
+          "Merit selection criteria (academic performance, etc.)"
+        ],
+        "how_to_apply": [
+          "Apply for admission and complete the OneApp/general scholarship application if required by Iowa State",
+          "Submit any additional materials requested for competitive scholarships"
+        ]
+      },
+      {
+        "name": "The Gates Scholarship (TGS)",
+        "college": null,
+        "kind": "external",
+        "provider": "The Gates Scholarship",
+        "award": "Full cost of attendance not already covered by other financial aid (last-dollar scholarship).",
+        "deadline": null,
+        "link": "https://www.thegatesscholarship.org/",
+        "why_suitable": "High academic achievement and leadership can match TGS, but eligibility is limited to specific minority groups; if you are Asian American only, you may not qualify unless you also identify with an eligible group listed by TGS.",
+        "key_eligibility": [
+          "High school senior",
+          "Meets TGS eligible minority group definition (see official site)",
+          "Strong academic record and leadership"
+        ],
+        "how_to_apply": [
+          "Apply during the open application window on the official TGS portal",
+          "Submit required essays/recommendations and financial information as requested"
+        ]
+      },
+      {
+        "name": "Jack Kent Cooke Foundation College Scholarship Program",
+        "college": null,
+        "kind": "external",
+        "provider": "Jack Kent Cooke Foundation",
+        "award": "Up to $55,000 per year (as stated by program; used for tuition, living, books, etc.).",
+        "deadline": null,
+        "link": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
+        "why_suitable": "You have the academic profile for highly selective scholarships; JKC is need-focused, so it’s a strong option if your financial need qualifies (household income can be higher in some cases, but must show need).",
+        "key_eligibility": [
+          "High school senior planning to enroll in a 4-year college",
+          "Demonstrated financial need (per program)",
+          "Strong academic achievement"
+        ],
+        "how_to_apply": [
+          "Apply via the JKCF application portal during the annual cycle",
+          "Provide transcripts, recommendations, and financial information"
+        ]
+      },
+      {
+        "name": "Dell Scholars Program",
+        "college": null,
+        "kind": "external",
+        "provider": "Michael & Susan Dell Foundation",
+        "award": "$20,000 plus support services (per program description).",
+        "deadline": null,
+        "link": "https://www.dellscholars.org/",
+        "why_suitable": "If you participate in an approved college readiness program (a requirement), your strong academics and leadership make you competitive; this is a practical scholarship with persistence support.",
+        "key_eligibility": [
+          "High school senior",
+          "Participation in an approved college readiness program (required)",
+          "Minimum GPA requirement (see official site)"
+        ],
+        "how_to_apply": [
+          "Confirm eligibility via an approved college readiness program",
+          "Apply through the Dell Scholars application system during the open cycle"
+        ]
+      },
+      {
+        "name": "Amazon Future Engineer Scholarship",
+        "college": null,
+        "kind": "external",
+        "provider": "Amazon Future Engineer",
+        "award": "Up to $40,000 (typically $10,000/year for up to 4 years) plus a paid internship opportunity (details vary by year).",
+        "deadline": "2026-01-15",
+        "link": "https://www.amazonfutureengineer.com/scholarships",
+        "why_suitable": "You have strong CS/engineering alignment (programming club leadership, engineering intent). This scholarship also considers financial need, which may or may not fit your family income/asset profile.",
+        "key_eligibility": [
+          "High school senior in the U.S.",
+          "Plan to pursue computer science/engineering/related field",
+          "Meets program’s academic and financial criteria (see official site)"
+        ],
+        "how_to_apply": [
+          "Apply through the Amazon Future Engineer scholarship portal during the annual window",
+          "Submit transcript and required short answers/financial information"
+        ]
+      },
+      {
+        "name": "Society of Women Engineers (SWE) Scholarships",
+        "college": null,
+        "kind": "external",
+        "provider": "Society of Women Engineers",
+        "award": "Varies (multiple scholarships; amounts differ by fund).",
+        "deadline": null,
+        "link": "https://swe.org/scholarships/",
+        "why_suitable": "If you are a woman (not specified in your profile), SWE is one of the largest and most reliable engineering scholarship sources; your stats and engineering intent align strongly.",
+        "key_eligibility": [
+          "Identify as a woman (per SWE eligibility)",
+          "Plan to study engineering/engineering technology/computer science in an ABET-accredited or SWE-eligible program (varies)"
+        ],
+        "how_to_apply": [
+          "Create/login to SWE scholarship portal",
+          "Submit the unified application and any additional requirements by the posted deadline"
+        ]
+      },
+      {
+        "name": "IEEE Computer Society Scholarships (student/undergraduate awards; opportunities listed by IEEE CS)",
+        "college": null,
+        "kind": "external",
+        "provider": "IEEE Computer Society",
+        "award": "Varies by specific scholarship/award.",
+        "deadline": null,
+        "link": "https://www.computer.org/communities/students/scholarships",
+        "why_suitable": "You have strong academics and computing involvement (programming club leadership). IEEE CS lists scholarship opportunities relevant to CS/engineering pathways.",
+        "key_eligibility": [
+          "Eligibility varies by scholarship (often IEEE CS membership and CS/CE enrollment requirements)",
+          "Strong academic performance"
+        ],
+        "how_to_apply": [
+          "Review currently open IEEE CS scholarships on the official page",
+          "Apply to specific scholarships with required materials (transcripts, references, essays)"
+        ]
+      }
+    ]
+  }
+}

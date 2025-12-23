@@ -1,0 +1,322 @@
+{
+  "demo-user": {
+    "suggestions": [
+      {
+        "title": "Join an approved College Readiness Program ASAP (required for Dell Scholars)",
+        "category": "program",
+        "description": "Dell Scholars requires participation in an approved college readiness program. This is the single biggest “eligibility unlock” in your list—without it, you cannot apply. Many programs also provide advising, fee waivers, and structured milestones that help with Gates/Cooke applications too.",
+        "target_scholarships": [
+          "Dell Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "The Gates Scholarship (TGS)"
+        ],
+        "link": "https://www.dellscholars.org/students/",
+        "deadline": null,
+        "estimated_time": "1–3 hours to enroll + periodic check-ins during junior/senior year",
+        "priority": "high",
+        "difficulty": "easy",
+        "action_steps": [
+          "Open Dell Scholars → confirm the current list of “approved college readiness programs.”",
+          "Enroll in one that is available in CA and fits your schedule (common examples often include AVID, College Track, Upward Bound, etc.—verify on Dell’s current list).",
+          "Keep documentation (acceptance email, participation logs) for the Dell application."
+        ]
+      },
+      {
+        "title": "Clarify Gates Scholarship eligibility (Asian ethnicity is often NOT an eligible group)",
+        "category": "application_tip",
+        "description": "The Gates Scholarship eligibility is limited to specific minority groups (historically: African American, American Indian/Alaska Native, Asian & Pacific Islander American, and/or Hispanic American—definitions can change by year). Because your profile lists “Asian,” you should verify whether your specific identity qualifies under the current rules to avoid wasted effort and to target alternatives if not eligible.",
+        "target_scholarships": [
+          "The Gates Scholarship (TGS)"
+        ],
+        "link": "https://www.thegatesscholarship.org/",
+        "deadline": null,
+        "estimated_time": "30–60 minutes",
+        "priority": "high",
+        "difficulty": "easy",
+        "action_steps": [
+          "Check the current TGS eligibility page for the exact minority group definitions.",
+          "If eligible: build your application around leadership + service impact + academic excellence.",
+          "If not eligible: reallocate effort toward Cooke, SWE, Amazon Future Engineer, and institutional full-ride programs."
+        ]
+      },
+      {
+        "title": "Apply to MITES Summer (MIT) or MITES Semester (STEM + mentorship; strong MIT signal)",
+        "category": "program",
+        "description": "MITES is a flagship MIT program for strong STEM students and is highly aligned with MIT/Stanford/CMU/Georgia Tech admissions plus scholarship narratives (academic excellence + initiative + community). It’s especially valuable for engineering/CS students and can strengthen recommendation letters and essays.",
+        "target_scholarships": [
+          "MIT Need-Based Financial Aid (undergraduate)",
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "IEEE Computer Society Scholarships",
+          "Society of Women Engineers (SWE) Scholarships"
+        ],
+        "link": "https://mites.mit.edu/",
+        "deadline": null,
+        "estimated_time": "Summer full-time (MITES Summer) or school-year commitment (MITES Semester)",
+        "priority": "high",
+        "difficulty": "challenging",
+        "action_steps": [
+          "Review eligibility and application components on the MITES site (essays, transcript, recs).",
+          "Ask your UCSD research mentor + a STEM teacher for recommendation letters early (give them a 2–3 week buffer).",
+          "Frame your application around your DNN research + state science exhibition win + leadership as varsity captain."
+        ]
+      },
+      {
+        "title": "Apply to UC COSMOS (California) for engineering/AI research readiness",
+        "category": "program",
+        "description": "COSMOS is a respected CA STEM summer program with strong engineering/CS clusters and a track record of producing research-style projects. It’s a realistic, high-impact step given your CA residency and prior UCSD research exposure.",
+        "target_scholarships": [
+          "UC Berkeley Financial Aid & Scholarships (Need-based grants; scholarships via Berkeley Scholarship Connection)",
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "Georgia Tech Stamps President’s Scholars Program",
+          "IEEE Computer Society Scholarships",
+          "Society of Women Engineers (SWE) Scholarships"
+        ],
+        "link": "https://cosmos-ucop.ucdavis.edu/",
+        "deadline": null,
+        "estimated_time": "Summer full-time (typically 4 weeks)",
+        "priority": "high",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Select a COSMOS site/cluster aligned with ML/engineering (e.g., AI, robotics, data science, ECE).",
+          "Use your UCSD DNN work as evidence you can handle research-style projects.",
+          "Aim to produce a tangible output (poster/paper/demo) you can reuse in scholarship apps."
+        ]
+      },
+      {
+        "title": "Enter Regeneron Science Talent Search (STS) with your UCSD deep learning work",
+        "category": "competition",
+        "description": "Regeneron STS is one of the most prestigious U.S. research competitions for high school seniors. Your UCSD DNN research + existing state science exhibition win is an excellent base. Even “Semifinalist” is a major national credential that helps Stamps/Cooke/elite admissions and can lead to strong recommendation letters.",
+        "target_scholarships": [
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "MIT Need-Based Financial Aid (undergraduate)",
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "IEEE Computer Society Scholarships",
+          "Amazon Future Engineer Scholarship"
+        ],
+        "link": "https://www.societyforscience.org/regeneron-sts/",
+        "deadline": null,
+        "estimated_time": "8–12 weeks (writing + research refinement) at 5–10 hrs/week",
+        "priority": "high",
+        "difficulty": "challenging",
+        "action_steps": [
+          "Continue the UCSD project remotely (or extend in summer) to produce clear results (metrics, ablations, comparisons).",
+          "Draft a research report and ask your mentor to review for technical accuracy.",
+          "Prepare STS application materials: research essay, activities, recommendations, and a polished project abstract."
+        ]
+      },
+      {
+        "title": "Compete in ISEF pipeline: local fair → CA Science & Engineering Fair (CSEF) → ISEF qualification",
+        "category": "competition",
+        "description": "You already ranked #1 in a state science exhibition; converting that momentum into the Society for Science fair pipeline can lead to ISEF qualification—highly recognized by top universities and scholarship reviewers for research excellence.",
+        "target_scholarships": [
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "MIT Need-Based Financial Aid (undergraduate)",
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "IEEE Computer Society Scholarships"
+        ],
+        "link": "https://www.societyforscience.org/international-science-and-engineering-fair/",
+        "deadline": null,
+        "estimated_time": "Seasonal (fall–spring); 3–6 hrs/week during peak months",
+        "priority": "high",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Identify your regional fair that qualifies to ISEF (ask your school counselor or search Society for Science affiliated fairs).",
+          "Repackage your DNN work into a fair-ready project: problem statement, method, dataset ethics, results, limitations.",
+          "Create a poster + 2-minute pitch; practice judging Q&A weekly."
+        ]
+      },
+      {
+        "title": "Apply to Amazon Future Engineer Scholarship (and align activities with CS/engineering impact)",
+        "category": "application_tip",
+        "description": "Amazon Future Engineer is directly aligned with your intended major and includes internship potential. The strongest applications show both technical skill and community impact—your service work can be reframed into a tech-for-good initiative (e.g., logistics optimization for food distribution).",
+        "target_scholarships": [
+          "Amazon Future Engineer Scholarship",
+          "IEEE Computer Society Scholarships",
+          "Dell Scholars Program"
+        ],
+        "link": "https://www.amazonfutureengineer.com/scholarships",
+        "deadline": "2026-01-15",
+        "estimated_time": "20–30 hours total across fall/winter of senior year",
+        "priority": "high",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Track leadership/service hours and outcomes (people served, meals delivered, efficiency improvements).",
+          "Build one concrete CS artifact tied to service (simple web app, route optimizer, volunteer scheduling tool).",
+          "Prepare a resume that highlights: UCSD research, state #1 exhibition, leadership roles, and impact metrics."
+        ]
+      },
+      {
+        "title": "Start/lead a “Tech for Food Security” project with your existing service (measurable impact)",
+        "category": "leadership",
+        "description": "Many major scholarships (Stamps/Cooke/Dell/Gates) reward measurable leadership and community impact. You already volunteer feeding the poor—turn that into an engineering leadership story by building a small system that improves operations (inventory tracking, demand forecasting, volunteer scheduling, donation matching). This also creates a portfolio piece for CS/engineering scholarships.",
+        "target_scholarships": [
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "Dell Scholars Program",
+          "Amazon Future Engineer Scholarship",
+          "Stanford Undergraduate Need-Based Financial Aid"
+        ],
+        "link": null,
+        "deadline": null,
+        "estimated_time": "5–10 hrs/week for 8–12 weeks",
+        "priority": "high",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Meet with the nonprofit/food pantry coordinator: identify one bottleneck (no-shows, inventory waste, routing).",
+          "Build an MVP in Python (Streamlit) or a simple web app; pilot it for 4 weeks.",
+          "Quantify results (reduced wait time, increased distribution capacity, fewer stockouts) for scholarship essays."
+        ]
+      },
+      {
+        "title": "Apply to Stanford AI4ALL (if eligible) or similar AI summer programs",
+        "category": "program",
+        "description": "AI4ALL-affiliated programs provide mentorship, responsible AI framing, and strong signaling for AI/engineering applicants. This complements your deep learning research by adding ethics, communication, and community impact—useful for Stanford/MIT/major scholarships.",
+        "target_scholarships": [
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "MIT Need-Based Financial Aid (undergraduate)",
+          "Georgia Tech Stamps President’s Scholars Program",
+          "IEEE Computer Society Scholarships"
+        ],
+        "link": "https://ai-4-all.org/",
+        "deadline": null,
+        "estimated_time": "Summer program (varies by site)",
+        "priority": "medium",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Check AI4ALL program sites and eligibility (some are location- or identity-based).",
+          "If Stanford AI4ALL is not available/eligible, apply to another AI4ALL partner program.",
+          "Prepare a short portfolio: GitHub repo from your DNN work + a short write-up on responsible AI considerations."
+        ]
+      },
+      {
+        "title": "Compete in USACO (Silver→Gold) to validate algorithms club leadership",
+        "category": "competition",
+        "description": "USACO is a clear, standardized credential for algorithms/CS strength and pairs perfectly with being an algorithms club officer. Advancing to Gold is strong for MIT/CMU/GT engineering/CS and helps IEEE/Amazon Future Engineer narratives.",
+        "target_scholarships": [
+          "Amazon Future Engineer Scholarship",
+          "IEEE Computer Society Scholarships",
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Carnegie Mellon University Undergraduate Financial Aid (Need-based; limited merit)"
+        ],
+        "link": "https://usaco.org/",
+        "deadline": null,
+        "estimated_time": "3–5 hrs/week for 4–6 months",
+        "priority": "medium",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Take a baseline USACO contest to determine current level (Bronze/Silver/etc.).",
+          "Create a weekly practice plan: 2 problem sets + 1 virtual contest.",
+          "Host an algorithms club “USACO ladder” to demonstrate leadership and multiply impact."
+        ]
+      },
+      {
+        "title": "Publish a polished research artifact: arXiv preprint or well-documented GitHub + poster",
+        "category": "research",
+        "description": "Scholarship reviewers value evidence of rigor and communication. If journal publication isn’t realistic, a strong alternative is a clean GitHub repo (reproducible code, README, results) plus a poster and optionally an arXiv preprint with mentor oversight. This strengthens STS/ISEF entries and makes your work legible to non-experts (important for Stamps/Cooke/Dell).",
+        "target_scholarships": [
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "IEEE Computer Society Scholarships",
+          "Amazon Future Engineer Scholarship"
+        ],
+        "link": "https://arxiv.org/",
+        "deadline": null,
+        "estimated_time": "4–8 weeks at 5–8 hrs/week",
+        "priority": "medium",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Ask your UCSD mentor what can be publicly shared (data/code/IP constraints).",
+          "Create a reproducible repo: environment file, training scripts, evaluation notebook, and clear figures.",
+          "Write a 1–2 page “project brief” for scholarship applications (problem, approach, results, impact)."
+        ]
+      },
+      {
+        "title": "Join SWE (if eligible) + pursue SWE Next / local section leadership and scholarships",
+        "category": "leadership",
+        "description": "SWE scholarships prioritize engineering commitment, leadership, and community. Local section involvement (events, outreach, mentoring) can quickly add credible engineering leadership beyond school clubs and sports.",
+        "target_scholarships": [
+          "Society of Women Engineers (SWE) Scholarships",
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program"
+        ],
+        "link": "https://swe.org/",
+        "deadline": null,
+        "estimated_time": "2–4 hrs/month (plus 1–2 events/semester)",
+        "priority": "medium",
+        "difficulty": "easy",
+        "action_steps": [
+          "Check for a nearby SWE professional section and any SWE Next opportunities.",
+          "Volunteer to run one outreach activity (e.g., intro Python/robotics workshop for middle schoolers).",
+          "Track outcomes (students taught, curriculum created) for SWE scholarship applications."
+        ]
+      },
+      {
+        "title": "IEEE Computer Society student membership + apply to IEEE CS awards/scholarships",
+        "category": "networking",
+        "description": "IEEE CS opportunities often favor demonstrated engagement with the computing community. Membership plus a small leadership/service project (talk, workshop, paper/poster) can make you more competitive and creates a professional network for letters and internships.",
+        "target_scholarships": [
+          "IEEE Computer Society Scholarships",
+          "Amazon Future Engineer Scholarship"
+        ],
+        "link": "https://www.computer.org/",
+        "deadline": null,
+        "estimated_time": "1–2 hrs/month",
+        "priority": "medium",
+        "difficulty": "easy",
+        "action_steps": [
+          "Join IEEE Computer Society (student).",
+          "Attend one webinar/technical talk per month and keep a short reflection log (useful for essays/interviews).",
+          "Monitor the IEEE CS scholarships/awards page and build a calendar of deadlines."
+        ]
+      },
+      {
+        "title": "Targeted course credential: NVIDIA Deep Learning Institute (DLI) or Coursera ML/DS certificate",
+        "category": "certification",
+        "description": "A credible certificate can support your research narrative and provide structured proof of skills. This is not a substitute for research/competitions, but it’s a fast, feasible add-on given 5–10 hrs/week.",
+        "target_scholarships": [
+          "Amazon Future Engineer Scholarship",
+          "IEEE Computer Society Scholarships",
+          "Carnegie Mellon University Undergraduate Financial Aid (Need-based; limited merit)"
+        ],
+        "link": "https://www.nvidia.com/en-us/training/",
+        "deadline": null,
+        "estimated_time": "10–30 hours total",
+        "priority": "low",
+        "difficulty": "easy",
+        "action_steps": [
+          "Pick one credential aligned to your current project (deep learning, computer vision, or MLOps basics).",
+          "Complete it and add the certificate + a short project demo to your portfolio.",
+          "Tie the learning directly to improvements in your research or service tech project."
+        ]
+      },
+      {
+        "title": "Scholarship essay strategy: build a single ‘Engineering + Service + Leadership’ throughline with metrics",
+        "category": "essay_strategy",
+        "description": "Your strongest differentiator is the combination of elite academics + research + high-level athletics leadership + service. The gap to address is “cohesive narrative with measurable impact.” Stamps/Cooke/Dell/Amazon (and selective admissions) respond well to a clear arc: identify a community problem, apply engineering, lead a team, show results, reflect on growth.",
+        "target_scholarships": [
+          "Georgia Tech Stamps President’s Scholars Program",
+          "Jack Kent Cooke Foundation College Scholarship Program",
+          "Dell Scholars Program",
+          "Amazon Future Engineer Scholarship",
+          "Stanford Undergraduate Need-Based Financial Aid",
+          "MIT Need-Based Financial Aid (undergraduate)"
+        ],
+        "link": null,
+        "deadline": null,
+        "estimated_time": "2–3 weekends to create a master narrative + ongoing updates",
+        "priority": "high",
+        "difficulty": "moderate",
+        "action_steps": [
+          "Create a 1-page ‘impact resume’ with numbers: people served, hours led, competition ranks, research results.",
+          "Write 3 core stories (leadership conflict/resolution as captain; research challenge; service-tech project impact).",
+          "Ask 2 readers (STEM teacher + non-STEM adult) to review for clarity and impact."
+        ]
+      }
+    ],
+    "summary": "Top immediate moves: (1) enroll in a Dell-approved college readiness program to unlock eligibility, (2) verify Gates eligibility, and (3) build a nationally legible spike by extending your UCSD deep learning work into Regeneron STS/ISEF. In parallel, convert existing service into an engineering-led, measurable tech-for-good project (high leverage for Stamps/Cooke/Dell/Amazon). Add one selective summer program (MITES/COSMOS/AI4ALL) and one standardized CS credential (USACO) to round out academic validation and leadership impact before Fall 2026."
+  }
+}

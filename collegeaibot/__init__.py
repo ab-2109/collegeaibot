@@ -5,5 +5,6 @@ intended to be used as a node in a larger agentic pipeline (e.g. LangGraph).
 """
 
 from .intake.agent import IntakeAgent  # re-export for convenience
+from .scholarships.agent import ScholarshipsAgent
 
-__all__ = ["IntakeAgent"]
+__all__ = ["IntakeAgent", "ScholarshipsAgent"]

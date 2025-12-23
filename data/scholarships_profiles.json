@@ -1,0 +1,22 @@
+{
+  "demo-user": {
+    "scholarships": {
+      "application_cycle_year": "Fall 2026 entry",
+      "citizenship": "US citizen",
+      "entry_term": "will apply to both where possible",
+      "entry_term_confirmed": "flexible",
+      "entry_year": "Fall 2026",
+      "ethnicity": "Asian",
+      "household_income_band": "60-100k",
+      "household_income_range": "$80-140k",
+      "identity_eligibility": "None",
+      "identity_scholarships_opt_in": "Yes",
+      "need_based_aid_opt_in": "Inclde need+merit",
+      "state_of_residence": "CA",
+      "student_level": "HIgh school senior",
+      "target_colleges": "CMU, UIUC and Georigia Tech",
+      "target_colleges_final": "CMU, UIUC and Georgia Tech",
+      "target_colleges_primary": "CMU, Georgia Tech and UIUC"
+    }
+  }
+}

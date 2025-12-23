@@ -25,7 +25,8 @@ load_dotenv()
 DEFAULT_MODEL = os.getenv("COLLEGEAIBOT_MODEL", "gpt-5.2")
 
 # Default request timeout (seconds) to avoid hanging forever.
-DEFAULT_TIMEOUT_S = float(os.getenv("COLLEGEAIBOT_TIMEOUT_S", "60"))
+# Increased to allow for complex scholarship recommendation prompts.
+DEFAULT_TIMEOUT_S = float(os.getenv("COLLEGEAIBOT_TIMEOUT_S", "180"))
 
 
 def get_openai_client(api_key: Optional[str] = None) -> OpenAI:

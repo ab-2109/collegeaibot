@@ -33,11 +33,11 @@ def _is_set(v: Any) -> bool:
 
 @dataclass(frozen=True)
 class ScholarshipsConfig:
-    max_recommendations: int = 8
+    max_recommendations: int = 20
 
 
 SYSTEM_INSTRUCTIONS = """
-You are a scholarships recommender.
+You are a comprehensive scholarships recommender. Your goal is to find ALL possible scholarships the student may be eligible for.
 
 Constraints:
 - There is NO internal scholarships database/catalog available.
@@ -45,13 +45,20 @@ Constraints:
 - Include a direct link to the scholarship's official page (provider/foundation/university page). Do NOT use aggregator-only pages.
 - If you are not confident a scholarship exists and you cannot provide an official link, do not include it.
 - Deadlines must be specific and returned as an ISO date string YYYY-MM-DD when available.
-- Prefer scholarships tied to the colleges already recommended (institutional scholarships / scholarship portals / priority deadlines),
-  and then add a small number of national external scholarships.
-- Ask at most ONE question per turn, only if it would materially improve the recommendations.
-- If you ask a question, set question.id to a dot-path where the answer should be stored in the profile.
-    Prefer storing scholarship-only fields under the 'scholarships.' namespace.
+- DO NOT ask any more questions. All required eligibility info has been collected. Proceed directly to RECOMMEND.
 
-Output MUST be valid JSON that matches the provided schema.
+Scholarship categories to include:
+1. INSTITUTIONAL: University-specific scholarships, merit awards, departmental scholarships, honors programs for EACH college on the list.
+2. STATE-BASED: State grants and scholarships (Cal Grant, HOPE, Bright Futures, etc.) based on student's state.
+3. CORPORATE/COMPANY: Scholarships from tech companies (Google, Microsoft, Apple, Intel, NVIDIA, Qualcomm, etc.), aerospace (Boeing, Lockheed Martin), automotive, energy companies, etc.
+4. PRIVATE FOUNDATIONS: Gates Scholarship, Jack Kent Cooke, Dell Scholars, Horatio Alger, Elks, etc.
+5. PROFESSIONAL ASSOCIATIONS: IEEE, ACM, ASME, NSBE, SHPE, SWE, AISES, oSTEM, etc.
+6. COMMUNITY/SERVICE: Rotary, Kiwanis, Lions Club, Elks, VFW, American Legion, etc.
+7. IDENTITY-BASED: Scholarships for specific ethnicities, genders, first-generation students, etc. (if student opted in).
+8. STEM/ENGINEERING SPECIFIC: National STEM scholarships, engineering society awards, science competition scholarships.
+9. ESSAY/COMPETITION: Major national competitions (Regeneron STS, Siemens, Davidson Fellows, etc.).
+
+Output MUST be valid JSON that matches the provided schema with action=RECOMMEND.
 """.strip()
 
 
@@ -191,6 +198,27 @@ def _get_first_college_names(advisor_data: Optional[Dict[str, Any]], max_n: int 
         if isinstance(r, dict) and r.get("college_name"):
             names.append(str(r.get("college_name")))
     return names
+
+
+def _get_colleges_by_category(advisor_data: Optional[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    """Group advisor recommendations by category (Extreme Reach, Target Match, Safety)."""
+    result: Dict[str, List[Dict[str, Any]]] = {
+        "Extreme Reach": [],
+        "Target Match": [],
+        "Safety": [],
+    }
+    if not isinstance(advisor_data, dict):
+        return result
+    recs = advisor_data.get("recommendations")
+    if not isinstance(recs, list):
+        return result
+    for r in recs:
+        if not isinstance(r, dict):
+            continue
+        cat = r.get("category", "")
+        if cat in result:
+            result[cat].append(r)
+    return result
 
 
 def _get_college_scholarship_urls(advisor_data: Optional[Dict[str, Any]], max_n: int = 10) -> Dict[str, str]:
@@ -352,7 +380,7 @@ class ScholarshipsAgent:
             return turn.model_dump(mode="json"), updated_profile
 
         # Ask/recommend based on the profile (no scholarships database).
-        # Deterministic gating: ask key eligibility questions first.
+        # Deterministic gating: ask key eligibility questions first (only the 6 core questions).
         gq = _next_gating_question(updated_profile)
         if gq is not None:
             turn = NextTurn(
@@ -364,6 +392,7 @@ class ScholarshipsAgent:
             )
             return turn.model_dump(mode="json"), updated_profile
 
+        # All gating questions answered - proceed directly to recommendations.
         advisor_summary = None
         advisor_recs = None
         if isinstance(advisor_data, dict):
@@ -372,6 +401,15 @@ class ScholarshipsAgent:
 
         college_names = _get_first_college_names(advisor_data)
         college_urls = _get_college_scholarship_urls(advisor_data)
+        colleges_by_category = _get_colleges_by_category(advisor_data)
+
+        # Get state for state-based scholarships
+        state = _get_by_path(updated_profile, "scholarships.state_of_residence") or _get_by_path(updated_profile, "state_of_residence") or ""
+
+        # Get ethnicity and identity info for targeted scholarships
+        ethnicity = _get_by_path(updated_profile, "scholarships.ethnicity") or ""
+        identity_opt_in = _get_by_path(updated_profile, "scholarships.identity_scholarships_opt_in") == "Yes"
+        intended_major = _get_by_path(updated_profile, "intended_major_primary") or "Engineering"
 
         messages = [
             {"role": "system", "content": SYSTEM_INSTRUCTIONS},
@@ -380,20 +418,53 @@ class ScholarshipsAgent:
                 "content": (
                     "STUDENT PROFILE (JSON):\n"
                     f"{updated_profile}\n\n"
-                    "ADVISOR OUTPUT (JSON, may be null):\n"
-                    f"{{'summary': {advisor_summary!r}, 'recommendations': {advisor_recs!r}}}\n\n"
-                    "COLLEGES TO PRIORITIZE (from advisor):\n"
-                    f"{college_names!r}\n\n"
-                    "KNOWN OFFICIAL PAGES (from advisor; use these as starting points):\n"
+                    "COLLEGES BY CATEGORY:\n"
+                    f"Extreme Reach: {[c.get('college_name') for c in colleges_by_category.get('Extreme Reach', [])]}\n"
+                    f"Target Match: {[c.get('college_name') for c in colleges_by_category.get('Target Match', [])]}\n"
+                    f"Safety: {[c.get('college_name') for c in colleges_by_category.get('Safety', [])]}\n\n"
+                    "KNOWN SCHOLARSHIP/AID PAGES FROM ADVISOR:\n"
                     f"{college_urls!r}\n\n"
-                    "Decide the next turn. If recommending, return scholarships with official links.\n"
-                    "Rules for recommendations:\n"
-                    "- Include as many college-specific institutional scholarship opportunities as possible for the advisor colleges.\n"
-                    "- For colleges with no merit scholarships (e.g., need-based only), include their official financial aid deadlines.\n"
-                    "- Provide ISO deadlines YYYY-MM-DD when possible (do not say 'varies by year').\n"
-                    "- If a specific deadline is not on the official page, set deadline=null.\n"
-                    "- Keep total recommendations <= "
-                    f"{self.config.max_recommendations}."
+                    f"STATE: {state!r}\n"
+                    f"INTENDED MAJOR: {intended_major!r}\n"
+                    f"ETHNICITY (if opted in): {ethnicity if identity_opt_in else 'Not provided'}\n"
+                    f"IDENTITY-BASED OPT-IN: {identity_opt_in}\n\n"
+                    "INSTRUCTIONS - Return scholarships NOW (action=RECOMMEND). Do NOT ask any questions.\n\n"
+                    "REQUIRED SCHOLARSHIP CATEGORIES (include scholarships from EACH):\n\n"
+                    "1. INSTITUTIONAL (for each college above):\n"
+                    "   - University merit scholarships, presidential scholarships\n"
+                    "   - Engineering/CS departmental scholarships\n"
+                    "   - Honors college scholarships\n"
+                    "   - Need-based institutional grants\n\n"
+                    f"2. STATE-BASED (for {state}):\n"
+                    "   - State grant programs (Cal Grant, Middle Class Scholarship if CA)\n"
+                    "   - State merit scholarships\n\n"
+                    "3. CORPORATE/COMPANY SCHOLARSHIPS:\n"
+                    "   - Tech: Google, Microsoft, Apple, Amazon, Intel, NVIDIA, Qualcomm, Adobe, Salesforce\n"
+                    "   - Aerospace/Defense: Boeing, Lockheed Martin, Northrop Grumman, Raytheon\n"
+                    "   - Other: Shell, ExxonMobil, Toyota, Ford, GM, Siemens\n\n"
+                    "4. PRIVATE FOUNDATIONS:\n"
+                    "   - Gates Scholarship, Jack Kent Cooke, Dell Scholars, Horatio Alger\n"
+                    "   - Bezos Scholars, Cameron Impact, Posse Foundation\n"
+                    "   - Ron Brown, Jackie Robinson Foundation\n\n"
+                    "5. PROFESSIONAL ASSOCIATIONS:\n"
+                    "   - IEEE, ACM, ASME, AIAA, SAE International\n"
+                    "   - NSBE, SHPE, SWE, AISES, oSTEM (if eligible)\n\n"
+                    "6. COMMUNITY/SERVICE ORGANIZATIONS:\n"
+                    "   - Rotary, Kiwanis, Elks National Foundation\n"
+                    "   - American Legion, VFW, DAR\n\n"
+                    "7. STEM/ENGINEERING COMPETITIONS:\n"
+                    "   - Regeneron STS, Siemens Competition\n"
+                    "   - Davidson Fellows, Goldwater (if applicable)\n\n"
+                    + (f"8. IDENTITY-BASED (student is {ethnicity}):\n"
+                       "   - Scholarships specific to this background\n\n" if identity_opt_in and ethnicity else "")
+                    + "For each scholarship:\n"
+                    "- Use the official provider link (NOT Fastweb, Scholarships.com, Niche, etc.)\n"
+                    "- Set deadline as ISO YYYY-MM-DD if known, otherwise null\n"
+                    "- Explain specifically why it fits THIS student's profile\n\n"
+                    f"Return up to {self.config.max_recommendations} scholarships. Prioritize:\n"
+                    "- Higher award amounts\n"
+                    "- Better fit with student's profile (major, stats, background)\n"
+                    "- Realistic eligibility match"
                 ),
             },
         ]

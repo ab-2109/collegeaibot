@@ -88,6 +88,41 @@ def _get_by_path(d: Dict[str, Any], path: str) -> Any:
     return cur
 
 
+_BOOL_PATHS = {
+    "us_only",
+    "want_reach_match_safety",
+}
+
+
+def _coerce_last_answer(path: str, answer: Optional[str]) -> Any:
+    """Best-effort coercion for deterministic storage of the user's last answer.
+
+    Goal: prevent re-asking the same question by ensuring the field is set to
+    *something* representing the user's response, even if the model fails to
+    emit a patch.
+    """
+
+    if answer is None:
+        return None
+
+    a = answer.strip()
+    low = a.lower()
+
+    # Booleans
+    if path in _BOOL_PATHS:
+        if low in {"yes", "y", "true", "1"}:
+            return True
+        if low in {"no", "n", "false", "0", "none", "null"}:
+            return False
+
+    # Common null-ish answers: preserve as a literal string marker rather than
+    # None, so the intake won't loop trying to fill the same path.
+    if low in {"none", "null", "n/a", "na", "nope", "not applicable"}:
+        return "None"
+
+    return a
+
+
 @dataclass(frozen=True)
 class IntakeConfig:
     """Controls how far the intake should go before finishing."""
@@ -166,12 +201,36 @@ class IntakeAgent:
         last_user_answer: Optional[str],
         last_question_id: Optional[str] = None,
     ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-        # Track which paths have already been asked (even if user answered "Skip").
-        meta = profile.get("_meta") if isinstance(profile.get("_meta"), dict) else {}
+        # Always deterministically store the user's last answer at the last question id.
+        # This prevents loops when the model fails to emit profile_patch (common for "no/none").
+        base_profile = copy.deepcopy(profile)
+        if (
+            isinstance(last_question_id, str)
+            and last_question_id.strip()
+            and last_user_answer is not None
+        ):
+            apply_patch_ops(
+                base_profile,
+                [{"path": last_question_id.strip(), "value": _coerce_last_answer(last_question_id.strip(), last_user_answer)}],
+            )
+            meta0 = base_profile.get("_meta") if isinstance(base_profile.get("_meta"), dict) else {}
+            asked0 = meta0.get("asked_paths") if isinstance(meta0.get("asked_paths"), list) else []
+            if last_question_id.strip() not in asked0:
+                asked0.append(last_question_id.strip())
+            meta0["asked_paths"] = asked0
+            base_profile["_meta"] = meta0
+
+        # Track which paths have already been asked (even if user answered "Skip" / "None").
+        meta = base_profile.get("_meta") if isinstance(base_profile.get("_meta"), dict) else {}
         asked_paths = meta.get("asked_paths") if isinstance(meta.get("asked_paths"), list) else []
         asked_set = {p for p in asked_paths if isinstance(p, str) and p.strip()}
 
-        unfilled_priority = [p for p in PRIORITY_SLOTS if not _is_answered(_get_by_path(profile, p))]
+        # IMPORTANT: never re-ask a path we've already asked, even if it is still "unfilled".
+        unfilled_priority = [
+            p
+            for p in PRIORITY_SLOTS
+            if p not in asked_set and not _is_answered(_get_by_path(base_profile, p))
+        ]
         filled_priority = [p for p in PRIORITY_SLOTS if p not in unfilled_priority]
 
         # Deep mode: keep going until we've covered the full path list.
@@ -180,7 +239,7 @@ class IntakeAgent:
             for p in DEEP_PATHS_ORDER:
                 if p in asked_set:
                     continue
-                if _is_answered(_get_by_path(profile, p)):
+                if _is_answered(_get_by_path(base_profile, p)):
                     continue
                 unfilled_deep_paths.append(p)
 
@@ -189,18 +248,20 @@ class IntakeAgent:
             allow_finish = False
 
         input_messages = [
-            {"role": "developer", "content": f"Current profile JSON:\n{json.dumps(profile, ensure_ascii=False)}"},
+            {"role": "developer", "content": f"Current profile JSON:\n{json.dumps(base_profile, ensure_ascii=False)}"},
             {
                 "role": "developer",
                 "content": json.dumps(
                     {
                         "filled_priority_slots": filled_priority,
                         "unfilled_priority_slots": unfilled_priority,
+                        "asked_paths": sorted(list(asked_set)),
                         "completion_mode": self.config.completion_mode,
                         "unfilled_deep_paths": unfilled_deep_paths,
                         "last_question_id": last_question_id,
                         "instruction": (
                             "Ask the earliest unfilled_priority_slot next. "
+                            "NEVER ask a field whose path is in asked_paths. "
                             "Do NOT re-ask filled fields unless clarifying the immediately previous answer."
                         ),
                         "finish_policy": (
@@ -245,16 +306,18 @@ class IntakeAgent:
             raise RuntimeError(f"Failed to parse model JSON. Raw snippet: {snippet}") from e
 
         patch_ops = data.get("profile_patch") or []
-        updated_profile = copy.deepcopy(profile)
+        updated_profile = copy.deepcopy(base_profile)
         if isinstance(patch_ops, list):
             apply_patch_ops(updated_profile, patch_ops)
 
-        # Record that we asked this path (prevents re-asking on Skip/Not sure).
-        if last_question_id and isinstance(last_question_id, str) and last_question_id.strip() and last_user_answer is not None:
+        # Ensure the newly-asked question id is recorded immediately too.
+        q = data.get("question")
+        qid = q.get("id") if isinstance(q, dict) else None
+        if isinstance(qid, str) and qid.strip():
             meta2 = updated_profile.get("_meta") if isinstance(updated_profile.get("_meta"), dict) else {}
             asked2 = meta2.get("asked_paths") if isinstance(meta2.get("asked_paths"), list) else []
-            if last_question_id.strip() not in asked2:
-                asked2.append(last_question_id.strip())
+            if qid.strip() not in asked2:
+                asked2.append(qid.strip())
             meta2["asked_paths"] = asked2
             updated_profile["_meta"] = meta2
 

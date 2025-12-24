@@ -123,5 +123,130 @@
         "scholarship_website": "https://www.financialaid.iastate.edu/scholarships"
       }
     ]
+  },
+  "jay": {
+    "summary": "With a 3.9 UW / 4.3 W GPA and a 1570 SAT, you\u2019re academically competitive for top engineering programs nationwide. Because engineering admissions can be more selective than overall university admissions (and some publics have limited merit aid for out-of-state students), this list balances highly selective \u201cname-brand\u201d engineering reaches with realistic targets and a couple of strong safeties\u2014while keeping an eye on your $30k\u2013$60k/year budget and your openness to location/vibe.",
+    "recommendations": [
+      {
+        "college_name": "Massachusetts Institute of Technology (MIT)",
+        "location": "Cambridge, MA",
+        "category": "Extreme Reach",
+        "match_score": 62,
+        "reasoning": "Top-tier engineering across all disciplines; even with excellent stats, MIT is a reach for everyone due to extremely low admit rates and holistic review. Strong fit if you want maximum academic rigor and research intensity.",
+        "tuition_estimate": "$62k+/yr tuition (plus fees, housing, meals; total cost higher)",
+        "application_deadline": "Early Action: Nov 1 (typical) / Regular Action: early Jan (typical)",
+        "admission_website": "https://admissions.mit.edu/",
+        "scholarship_info": "Need-based financial aid (MIT does not offer merit scholarships).",
+        "scholarship_website": "https://sfs.mit.edu/undergraduate-students/financial-aid/"
+      },
+      {
+        "college_name": "Stanford University",
+        "location": "Stanford, CA",
+        "category": "Extreme Reach",
+        "match_score": 64,
+        "reasoning": "Elite engineering plus strong optionality if you later pivot toward business/econ; extremely selective. Great for interdisciplinary exploration and entrepreneurship.",
+        "tuition_estimate": "$65k+/yr tuition (total cost higher)",
+        "application_deadline": "Restrictive Early Action: Nov 1 (typical) / Regular Decision: early Jan (typical)",
+        "admission_website": "https://admission.stanford.edu/",
+        "scholarship_info": "Need-based aid; no merit scholarships for undergrads.",
+        "scholarship_website": "https://financialaid.stanford.edu/"
+      },
+      {
+        "college_name": "University of California, Berkeley (College of Engineering)",
+        "location": "Berkeley, CA",
+        "category": "Extreme Reach",
+        "match_score": 66,
+        "reasoning": "In-state advantage helps, but Berkeley Engineering is still highly selective; outstanding engineering reputation and strong recruiting. Note: UC campuses are test-blind, so your SAT won\u2019t be considered for admission.",
+        "tuition_estimate": "CA resident tuition/fees ~ $15k/yr (total cost with housing/meals higher)",
+        "application_deadline": "UC application window typically Oct 1\u2013Nov 30",
+        "admission_website": "https://admissions.berkeley.edu/",
+        "scholarship_info": "Primarily need-based; limited campus scholarships. File FAFSA/CA Dream Act if eligible.",
+        "scholarship_website": "https://financialaid.berkeley.edu/"
+      },
+      {
+        "college_name": "University of Michigan, Ann Arbor (College of Engineering)",
+        "location": "Ann Arbor, MI",
+        "category": "Target Match",
+        "match_score": 78,
+        "reasoning": "Excellent engineering with broad majors and strong career outcomes; your academics are in-range for competitive consideration, though OOS engineering remains selective. Good balance of prestige and opportunities.",
+        "tuition_estimate": "Out-of-state total cost often $70k+/yr (can exceed your budget without aid)",
+        "application_deadline": "Early Action: Nov 1 (typical) / Regular Decision: early Feb (typical)",
+        "admission_website": "https://admissions.umich.edu/",
+        "scholarship_info": "Limited merit for out-of-state; explore College of Engineering scholarships and broader U-M aid resources.",
+        "scholarship_website": "https://finaid.umich.edu/"
+      },
+      {
+        "college_name": "University of California, San Diego (Jacobs School of Engineering)",
+        "location": "San Diego, CA",
+        "category": "Target Match",
+        "match_score": 84,
+        "reasoning": "Strong engineering and research; typically a more attainable UC engineering option than Berkeley/UCLA while still being high quality. UC is test-blind (SAT not used).",
+        "tuition_estimate": "CA resident tuition/fees ~ $15k/yr (total cost with housing/meals higher)",
+        "application_deadline": "UC application window typically Oct 1\u2013Nov 30",
+        "admission_website": "https://admissions.ucsd.edu/",
+        "scholarship_info": "Need-based aid and some campus scholarships; check UCSD scholarship opportunities.",
+        "scholarship_website": "https://fas.ucsd.edu/types/scholarships/"
+      },
+      {
+        "college_name": "University of California, Irvine (Henry Samueli School of Engineering)",
+        "location": "Irvine, CA",
+        "category": "Target Match",
+        "match_score": 86,
+        "reasoning": "Solid engineering outcomes and strong CA recruiting; generally a realistic match for high-stat CA students compared to the most selective UCs. UC is test-blind (SAT not used).",
+        "tuition_estimate": "CA resident tuition/fees ~ $15k/yr (total cost with housing/meals higher)",
+        "application_deadline": "UC application window typically Oct 1\u2013Nov 30",
+        "admission_website": "https://admissions.uci.edu/",
+        "scholarship_info": "Campus scholarships and need-based aid; review UCI scholarship portal and deadlines.",
+        "scholarship_website": "https://ofas.uci.edu/scholarships/"
+      },
+      {
+        "college_name": "University of Wisconsin\u2013Madison (College of Engineering)",
+        "location": "Madison, WI",
+        "category": "Target Match",
+        "match_score": 79,
+        "reasoning": "Well-regarded engineering with a classic big-campus experience; strong academics and recruiting. Often somewhat more attainable than the most selective engineering flagships, but still competitive.",
+        "tuition_estimate": "Out-of-state total cost often $60k+/yr (may be near/above your stated budget)",
+        "application_deadline": "Regular Decision typically early Jan (varies by year/round)",
+        "admission_website": "https://admissions.wisc.edu/",
+        "scholarship_info": "Merit scholarships are limited/competitive; check Wisc scholarship hub and engineering-specific awards.",
+        "scholarship_website": "https://financialaid.wisc.edu/types-of-aid/scholarships/"
+      },
+      {
+        "college_name": "Virginia Tech (College of Engineering)",
+        "location": "Blacksburg, VA",
+        "category": "Target Match",
+        "match_score": 83,
+        "reasoning": "Large, well-resourced engineering college with strong outcomes and many majors; typically a solid match for high-stat applicants, though engineering can be selective.",
+        "tuition_estimate": "Out-of-state total cost often $55k\u2013$65k/yr (varies by year)",
+        "application_deadline": "Early Action typically Nov 15 / Regular Decision typically Jan 15 (varies by year)",
+        "admission_website": "https://www.vt.edu/admissions.html",
+        "scholarship_info": "Merit scholarships available; check VT scholarship and financial aid resources.",
+        "scholarship_website": "https://finaid.vt.edu/"
+      },
+      {
+        "college_name": "Arizona State University (Fulton Schools of Engineering)",
+        "location": "Tempe, AZ",
+        "category": "Safety",
+        "match_score": 92,
+        "reasoning": "High-likelihood admission with your stats; very large engineering school with many pathways and strong industry connections. Often offers substantial merit for high SAT/GPA profiles, helping fit your $30k\u2013$60k budget.",
+        "tuition_estimate": "Out-of-state tuition/fees ~ $35k/yr (total cost higher; merit may reduce)",
+        "application_deadline": "Rolling admission (priority dates vary by term/program)",
+        "admission_website": "https://admission.asu.edu/first-year",
+        "scholarship_info": "ASU New American University (NAMU) merit scholarships are common for strong academics.",
+        "scholarship_website": "https://tuition.asu.edu/scholarships"
+      },
+      {
+        "college_name": "University of Arizona (College of Engineering)",
+        "location": "Tucson, AZ",
+        "category": "Safety",
+        "match_score": 91,
+        "reasoning": "Likely admission with your academic profile; solid engineering options and merit awards that can make costs manageable within your budget range.",
+        "tuition_estimate": "Out-of-state tuition/fees ~ $38k/yr (total cost higher; merit may reduce)",
+        "application_deadline": "Rolling admission (priority dates vary)",
+        "admission_website": "https://admissions.arizona.edu/",
+        "scholarship_info": "Merit scholarships for nonresidents; check main scholarship grid/award criteria.",
+        "scholarship_website": "https://financialaid.arizona.edu/types-of-aid/scholarships"
+      }
+    ]
   }
 }

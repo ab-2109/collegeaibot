@@ -18,6 +18,7 @@ class GeneralChatAgent:
         files_to_load = [
             "intake_profiles.json",
             "advisor_results.json",
+            "cv_review_results.json",
             "scholarship_recommendations.json",
             "prep_suggestions.json",
             "scholarships_profiles.json"

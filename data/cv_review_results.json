@@ -1,0 +1,55 @@
+{
+  "jay": {
+    "strategic_summary": "Your academics (3.9 UW / 4.3 W, 1570 SAT, AP Calc + AP Physics) are already in the competitive band for top-tier engineering-adjacent programs, but your profile is currently missing the single biggest driver for reach/target outcomes: a compelling, quantified extracurricular \u201cspike.\u201d To maximize admits at top-tier universities for General Engineering, you need (1) 1\u20132 flagship engineering projects with real-world users/results, (2) selective recognition (competitions/publications/patents/funding) that signals you\u2019re top-of-field, and (3) leadership that is clearly earned through measurable impact (not titles). Your application should read as: 'I build engineering solutions that measurably improve X,' supported by numbers, artifacts (GitHub, CAD, demos), and external validation.",
+    "improvements": [
+      {
+        "section": "Extracurriculars",
+        "current_weakness": "No activities listed, so there is no demonstrated engineering identity, leadership, or impact outside coursework.",
+        "suggestion": "Build 1 flagship engineering initiative (12\u201318 months) with a deliverable + metrics. Example options (pick ONE and go deep): (A) Hardware/robotics: design a low-cost sensor system (air quality/water leakage/energy monitoring) deployed in your community; target 25\u2013100 installations or 3\u20135 institutional partners. (B) Software/ML: build an engineering tool (e.g., predictive maintenance, scheduling optimization, CAD-to-BOM automation) with 500\u20132,000 users or adoption by 2\u201310 organizations. (C) Climate/energy: build an energy audit + retrofit recommendation pipeline for small businesses; aim to audit 30\u201360 sites and document estimated kWh/$ saved. Publish a website, GitHub repo, and a 2-minute demo video; track monthly active users, deployments, accuracy, savings, or time reduced.",
+        "target_college_context": "Top-tier universities admit engineers who show proof of building and shipping. A single, coherent project with measurable adoption is often more persuasive than many small clubs because it demonstrates initiative, technical depth, and real-world relevance."
+      },
+      {
+        "section": "Extracurriculars / Leadership",
+        "current_weakness": "No leadership roles or organizational impact is shown; admissions readers can\u2019t see you influencing people or systems.",
+        "suggestion": "Convert one activity into clear, high-leverage leadership by founding or transforming a program: launch an 'Engineering Build Lab' at your school/library where you run 8\u201312 build sessions/year; recruit 15\u201340 consistent members; secure $1,000\u2013$5,000 in sponsorships/donations (local companies, PTA, grants); and produce 10\u201325 completed projects/year. Document: # participants, $ raised, # workshops, retention rate, and outcomes (projects shipped, competition placements).",
+        "target_college_context": "At top-tier schools, leadership is evaluated by scope and outcomes. Creating an ecosystem (funding + curriculum + mentorship + deliverables) signals you\u2019ll scale impact on campus."
+      },
+      {
+        "section": "Awards / Distinction",
+        "current_weakness": "No awards are listed; without external validation, you may look like a strong student but not necessarily exceptional among similarly strong applicants.",
+        "suggestion": "Add 2\u20134 selective engineering validations. Choose from: (1) Robotics: qualify to state/nationals (FRC/FTC/VEX) with a defined subsystem ownership (controls, CAD, drivetrain) and quantify performance improvements (e.g., 'reduced autonomous error by 35%'). (2) Research competitions: Regeneron ISEF-affiliated fairs (aim: regional win/ISEF qualification). (3) Olympiad/academic comps: USACO (Silver/Gold), AMC/AIME, F=ma, Science Olympiad medals. (4) Entrepreneurship: pitch competitions; aim to win $1k\u2013$10k or secure 1\u20133 paying pilots. Build a timeline: Fall\u2013Winter prep, Spring competition season, Summer execution.",
+        "target_college_context": "Highly selective schools rely on outside signals to differentiate 4.0/1500+ applicants. Competitive awards function as third-party proof of unusual ability."
+      },
+      {
+        "section": "Summer Plan (Pre-12th Grade Summer)",
+        "current_weakness": "No summer plan is provided; summer is the best time to generate a step-change in technical depth and outcomes.",
+        "suggestion": "Design a 'Summer of Output' with 3 concrete deliverables: (1) One substantial engineering build (8\u201310 weeks) with weekly progress logs; (2) One mentorship or lab alignment (cold-email 30\u201360 local professors/PhD students/industry engineers for a defined project\u2014aim for 1 placement); (3) One public artifact: publish a paper-style report, open-source repo, or a small hardware run (e.g., 20 units) with user feedback surveys (N\u226530). Set measurable targets before summer starts: commits/week, prototype milestones, user tests, accuracy metrics, BOM cost, etc.",
+        "target_college_context": "Top schools value students who create tangible results when unstructured time is available. A high-output summer can become the backbone of your application narrative and essays."
+      },
+      {
+        "section": "Essays / Narrative",
+        "current_weakness": "Intended major is 'General Engineering' with 'no specific career goal,' which can read unfocused unless you articulate a clear problem-space you\u2019re committed to.",
+        "suggestion": "Pick a tight theme that connects everything: 'engineering for community-scale infrastructure reliability,' 'low-cost sensing and data systems,' or 'human-centered robotics.' Then build 3 proof points: (1) origin story (why you care), (2) technical arc (how your skills grew\u2014AP Physics/Calc + projects), (3) impact arc (who benefited, quantified). Write a 1-sentence positioning statement for the top of your activities list: 'I build __ that __ for __, measured by __.'",
+        "target_college_context": "At the most selective universities, 'fit' is really coherence + momentum. A clear engineering problem-space makes your application memorable and easier to advocate for in committee."
+      },
+      {
+        "section": "Letters of Recommendation",
+        "current_weakness": "No recommender strategy is described; even strong stats can be undercut by generic letters.",
+        "suggestion": "Secure 2 recommenders who can quantify your engineering mindset. Plan: (1) AP Physics teacher who can cite specific behaviors (e.g., 'built a lab apparatus,' 'led troubleshooting,' 'top 1\u20132 in class') and (2) a mentor/advisor tied to your flagship project (coach, research mentor, program sponsor) who can confirm outputs (# deployments, users, $ raised). Provide them a brag sheet with 6 bullet proofs + metrics.",
+        "target_college_context": "In reach-level pools, recommendations are used to separate 'high-performing' from 'rare.' Specific anecdotes and ranked comparisons matter more than praise."
+      },
+      {
+        "section": "Course Rigor / Academic Positioning",
+        "current_weakness": "Rigor tags are empty and the transcript context is unclear beyond AP Calc and AP Physics; top-tier schools want to see sustained highest-available rigor.",
+        "suggestion": "Confirm you are taking the highest available sequence through senior year: AP Calc BC (if available), advanced physics (AP Physics C if offered), and a rigorous CS/engineering course (AP CS A or equivalent). If your school lacks options, add an external credential with proof: 1 for-credit community college engineering course OR a structured online pathway with a capstone (e.g., circuits + embedded systems) and publish the capstone results. Quantify workload: hours/week, projects completed, final grade.",
+        "target_college_context": "Selective universities evaluate rigor relative to opportunity. Showing you maxed out offerings\u2014and created more rigor when options were limited\u2014supports an engineering-ready case."
+      },
+      {
+        "section": "Activities List Formatting (When You Build It)",
+        "current_weakness": "No activities are listed, and many applicants lose impact by writing vague descriptions once they do have them.",
+        "suggestion": "Write each activity with an 'Action + Tech + Impact + Scale' formula and hard numbers. Example template: 'Designed __ using __; deployed to __; improved __ by __%; led __ people; raised $__; reached __ users.' Aim for: 8\u201310 activities, but with 2\u20133 that dominate via scope. Keep a metrics log weekly so you\u2019re not guessing later.",
+        "target_college_context": "Top-tier schools skim fast. Quantified bullets help an AO instantly understand why you stand out among similarly strong academic applicants."
+      }
+    ]
+  }
+}

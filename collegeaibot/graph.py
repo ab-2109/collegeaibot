@@ -72,7 +72,6 @@ def entry_node(state: GraphState) -> GraphState:
     - If NO: Routes to Intake Form.
     """
     client_id = state['client_id']
-    # logger.info(f"Checking profile for {client_id}") 
     
     existing_profile = _load_from_disk("intake_profiles.json", client_id)
 
@@ -121,11 +120,14 @@ def intake_form_node(state: GraphState) -> GraphState:
             return {**state, "error": "User cancelled intake process."}
 
     _save_to_disk("intake_profiles.json", client_id, profile)
-    # No next_node needed here; the graph edge will point to cv_review
     return {**state, "profile": profile}
 
 def cv_review_node(state: GraphState) -> GraphState:
     logger.info("Entering CV Review Node")
+    
+    if not state.get("profile"):
+        return {**state, "error": "CV Review: No profile data available."}
+
     print("--- CV Strategy ---")
     agent = CVReviewAgent()
     advisor_blob = state.get("advisor_recommendations") or {}
@@ -135,7 +137,6 @@ def cv_review_node(state: GraphState) -> GraphState:
     result = agent.analyze_cv(state["profile"], advisor_recs)
     _save_to_disk("cv_review_results.json", state["client_id"], result)
 
-    # Print after advisor results (pipeline order is advisor -> cv_review).
     if isinstance(result, dict):
         summary = result.get("strategic_summary")
         if summary:
@@ -153,12 +154,15 @@ def cv_review_node(state: GraphState) -> GraphState:
 
 def advisor_node(state: GraphState) -> GraphState:
     logger.info("Entering Advisor Node")
+    
+    if not state.get("profile"):
+        return {**state, "error": "Advisor: No profile data available."}
+
     print("--- College Recommendations ---")
     agent = AdvisorAgent()
     result = agent.generate_recommendations(state["profile"])
     _save_to_disk("advisor_results.json", state["client_id"], result)
 
-    # Print recommendations first (user requested).
     if isinstance(result, dict):
         summary = result.get("summary")
         if summary:
@@ -183,6 +187,10 @@ def advisor_node(state: GraphState) -> GraphState:
 
 def scholarships_node(state: GraphState) -> GraphState:
     logger.info("Entering Scholarships Node")
+    
+    if not state.get("profile"):
+        return {**state, "error": "Scholarships: No profile data available."}
+
     print("--- Scholarships ---")
     try:
         agent = ScholarshipsAgent()
@@ -250,6 +258,10 @@ def scholarships_node(state: GraphState) -> GraphState:
 
 def scholarship_prep_node(state: GraphState) -> GraphState:
     logger.info("Entering Scholarship Prep Node")
+    
+    if not state.get("profile"):
+        return {**state, "error": "Prep: No profile data available."}
+
     print("--- Scholarship Prep Plan ---")
     try:
         agent = ScholarshipPrepAgent()
@@ -355,6 +367,12 @@ def route_entry(state: GraphState) -> str:
     """Determines where to go from the Entry Node"""
     return state.get("next_node", "intake_form")
 
+def route_after_intake(state: GraphState) -> str:
+    """Check if intake was successful or ended with error"""
+    if state.get("error"):
+        return "end"
+    return "advisor"
+
 def build_college_graph() -> StateGraph:
     builder = StateGraph(GraphState)
     
@@ -380,9 +398,18 @@ def build_college_graph() -> StateGraph:
         }
     )
     
+    # Conditional Edge from Intake Form (Fix for the crash)
+    builder.add_conditional_edges(
+        "intake_form",
+        route_after_intake,
+        {
+            "advisor": "advisor",
+            "end": END
+        }
+    )
+
     # Standard Pipeline Edges
-    # Advisor must run before CV review (CV uses reach/target colleges).
-    builder.add_edge("intake_form", "advisor")
+    # Note: Removed hard edge "intake_form" -> "advisor"
     builder.add_edge("advisor", "cv_review")
     builder.add_edge("cv_review", "scholarships")
     builder.add_edge("scholarships", "scholarship_prep")

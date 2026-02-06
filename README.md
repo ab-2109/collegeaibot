@@ -1,7 +1,7 @@
 # collegeaibot
 
 This repository currently contains a **questionnaire / intake agent** for
-US college applicants. The intake agent is designed to be a node in a
+US college applicants. The Intake agent is designed to be a node in a
 larger agentic pipeline (for example, a LangGraph workflow) that will
 feed a downstream **college recommendation agent**.
 
